@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Data::Dumper;
 
-print "### Start ###\n";
+print "### FIND 2ND LARGEST START ###\n";
 
 my @list;
 my $list_size = 10000000;
@@ -23,6 +23,7 @@ foreach (@list){
 		$counter++;
 	}
 	elsif($_ > $max_2nd){
+		$max_2nd = $_;
 		if($_ > $max){
 			my $temp;
 				$temp    = $max;
@@ -35,4 +36,4 @@ foreach (@list){
 print "Max    : $max\n";
 print "2nd Max: $max_2nd\n";
 
-print "### End ###\n";
+print "### FIND 2ND LARGEST END ###\n";
