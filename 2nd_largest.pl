@@ -16,20 +16,13 @@ for(my $i = 1 ; $i <= $list_size; $i++){
 my $max     = 0;
 my $max_2nd = 0;
 
-my $counter = 1;
 foreach (@list){
-	if($counter == 1){
+	if($_ > $max){
+		$max_2nd = $max;
 		$max = $_;
-		$counter++;
 	}
-	elsif($_ > $max_2nd){
+	elsif($_ < $max && $_ > $max_2nd){
 		$max_2nd = $_;
-		if($_ > $max){
-			my $temp;
-				$temp    = $max;
-				$max     = $_;
-				$max_2nd = $temp;
-		}
 	}
 }
 
